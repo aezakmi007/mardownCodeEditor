@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import RawInputData from "./components/RawInputData";
+import MarkDown from "./components/MarkDown";
+import MarkDownContextProvider from "./context/markDownContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MarkDownContextProvider>
+      <div class="App">
+        <div class="ui container grid">
+          <div class="ui row">
+            <div class="column eight wide">
+              <RawInputData />
+            </div>
+            <div class="column eight wide">
+              <MarkDown />
+            </div>
+          </div>
+        </div>
+      </div>
+    </MarkDownContextProvider>
   );
 }
 
