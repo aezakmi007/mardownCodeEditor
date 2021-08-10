@@ -1,7 +1,7 @@
 import "./App.css";
 import RawInputData from "./components/RawInputData";
 import MarkDown from "./components/MarkDown";
-import MarkDownContextProvider from "./context/markDownContext";
+import { MarkDownContextProvider } from "./context/markDownContext";
 
 function App() {
   return (

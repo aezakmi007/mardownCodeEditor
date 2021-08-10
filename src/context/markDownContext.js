@@ -11,6 +11,7 @@ export const MarkDownContextProvider = ({ children }) => {
 
   return (
     <markDownContext.Provider value={{ rawData, setData }}>
+      {/* {console.log(rawData)} */}
       {children}
     </markDownContext.Provider>
   );
