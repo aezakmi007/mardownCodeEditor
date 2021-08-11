@@ -6,13 +6,13 @@ import { MarkDownContextProvider } from "./context/markDownContext";
 function App() {
   return (
     <MarkDownContextProvider>
-      <div class="App">
-        <div class="ui container grid">
-          <div class="ui row">
-            <div class="column eight wide">
+      <div className="App">
+        <div className="ui container grid">
+          <div className="ui row">
+            <div className="column eight wide">
               <RawInputData />
             </div>
-            <div class="column eight wide">
+            <div className="column eight wide">
               <MarkDown />
             </div>
           </div>

@@ -1,17 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import useMarkdown from "../context/markDownContext";
 
 function RawInputData() {
-  const [text, setText] = useState("");
+  const [text, setText] = useState("# Welcome to the markdown Editor");
   const { setData } = useMarkdown();
-  setData(text);
+  // setData(text);
 
   const changeText = (e) => {
     setText(e.target.value);
   };
+
+  useEffect(() => {
+    setData(text);
+  }, [text]);
   return (
-    <div class="ui form">
-      <div class="field">
+    <div className="ui form">
+      <div className="field">
         <label>Enter Your Text</label>
         <textarea onChange={changeText} value={text} rows="20"></textarea>
       </div>
