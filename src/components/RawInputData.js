@@ -12,7 +12,7 @@ function RawInputData() {
 
   useEffect(() => {
     setData(text);
-  }, [text]);
+  }, [text, setData]);
   return (
     <div className="ui form">
       <div className="field">
